@@ -427,7 +427,7 @@ int main(int argc, char **argv)
     MPI_Bcast(&ROW, 1, MPI_INT, 0, comm);
     COL = ROW;
 
-    // NEW: подготовка директории вывода
+    //  подготовка директории вывода
     char dir_name[512] = "";
     if (rank == 0) {
         const char *base_dir = "./RESULT";
@@ -526,7 +526,7 @@ int main(int argc, char **argv)
         printf("  Wall time     : %f s\n", wall_time);
     }
 
-    // NEW: собираем поле и пишем Analytic_solution.plt и SOR_result.plt
+    // Cобираем поле и пишем Analytic_solution.plt и SOR_result.plt
     output_results_MPI(u, local_n, i_start, dx, dy,
                        dir_name, counts, displs,
                        comm, rank, size);
