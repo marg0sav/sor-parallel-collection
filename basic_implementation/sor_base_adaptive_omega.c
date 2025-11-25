@@ -39,7 +39,7 @@ int main(int argc, char **argv)
     double **u      = NULL;
     double **u_anal = NULL;
 
-    char dir_name[512];      // <- теперь это буфер, а не константа
+    char dir_name[512];
     char cmd[600];
     char prog_name[256];
     char timestamp[64];
@@ -265,7 +265,7 @@ void SOR(double **p, double dx, double dy, double tol, double omega_in,
     initialization(p_new);
 
     // -----------------------------
-    // NEW: оценка спектрального радиуса Jacobi и начальное omega
+    // Оценка спектрального радиуса Jacobi и начальное omega
     // -----------------------------
     int nx = ROW - 2;                 // внутренние узлы по x
     int ny = COL - 2;                 // внутренние узлы по y
@@ -277,7 +277,7 @@ void SOR(double **p, double dx, double dy, double tol, double omega_in,
     // локальная переменная для текущего omega
     double omega = 1.0;               // стартовое значение
 
-    // если пользователь передал что-то осмысленное – можно взять как старт
+    // если пользователь передал омега от 0 до 2
     if (omega_in > 0.0 && omega_in < 2.0) {
         omega = omega_in;
     }
