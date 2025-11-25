@@ -1,0 +1,35 @@
+# === Компиляторные артефакты C/C++ ===
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.exe
+*.out
+
+# === MPI / бинарники ===
+a.out
+main
+sor_*
+*.x
+
+
+# === Файлы сборки / проекты ===
+build/
+cmake-build-*/
+Makefile.in
+CMakeFiles/
+CMakeCache.txt
+*.cmake
+
+# === Python ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+
+# === Результаты расчётов ===
+RESULT/
+*.plt
