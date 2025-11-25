@@ -406,7 +406,7 @@ int main(int argc, char **argv)
     }
     if (NTHREADS < 1) NTHREADS = 1;
 
-    // NEW: подготовка директории вывода (как в MPI-версии)
+    //  подготовка директории вывода (как в MPI-версии)
     char dir_name[512] = "";
     {
         const char *base_dir = "./RESULT";
